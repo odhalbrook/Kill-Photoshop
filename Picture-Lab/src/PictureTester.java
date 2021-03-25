@@ -58,8 +58,8 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    testZeroBlue();
-    //testKeepOnlyBlue();
+    //testZeroBlue();
+    testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
     //testNegate();
@@ -81,4 +81,12 @@ public class PictureTester
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
   }
+
+private static void testKeepOnlyBlue() {
+	// TODO Auto-generated method stub
+	Picture beach = new Picture("beach.jpg");
+	beach.explore();
+	beach.keepOnlyBlue();
+	beach.explore();
+}
 }

@@ -94,8 +94,8 @@ public class Picture extends SimplePicture
     	{
     	for (Pixel pixelObj : rowArray)
     		{
-    		if(pixelObj.get())
-    		pixelObj.setBlue(0);
+    		pixelObj.setRed(0);
+    		pixelObj.setGreen(0);
     		}
     	}
 	}
@@ -179,7 +179,7 @@ public class Picture extends SimplePicture
 	    this.copy(flower2,100,0);
 	    this.copy(flower1,200,0);
 	    Picture flowerNoBlue = new Picture(flower2);
-	    flowerNoBlue.zeroBlue();
+	 //   flowerNoBlue.zeroBlue();
 	    this.copy(flowerNoBlue,300,0);
 	    this.copy(flower1,400,0);
 	    this.copy(flower2,500,0);
@@ -217,7 +217,8 @@ public class Picture extends SimplePicture
 		{
 	    Picture beach = new Picture("beach.jpg");
 	    beach.explore();
-	    beach.zeroBlue();
+	  //  beach.zeroBlue();
+	    beach.keepOnlyBlue();
 	    beach.explore();
 		}
 	} // this } is the end of class Picture, put all new methods before this
