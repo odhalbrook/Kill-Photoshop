@@ -87,6 +87,17 @@ public class Picture extends SimplePicture
 	    		}
 	    	}
 		}
+	public void negate()
+	{
+    Pixel[][] pixels = this.getPixels2D();
+    for (Pixel[] rowArray : pixels)
+    	{
+    	for (Pixel pixelObj : rowArray)
+    		{
+    		pixelObj.setBlue(-255);
+    		}
+    	}
+	}
 	public void keepOnlyBlue()
 	{
     Pixel[][] pixels = this.getPixels2D();
